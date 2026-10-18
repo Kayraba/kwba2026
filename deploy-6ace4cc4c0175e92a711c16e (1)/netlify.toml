@@ -1,0 +1,10 @@
+# Static front end only. The Node/Express API (server.js) runs on Render;
+# pages reach it via window.API_BASE set in public/assets/api-config.js.
+[build]
+  publish = "public"
+  command = ""
+
+[build.environment]
+  # Not a Next.js project — the Next.js runtime is enabled in the UI and
+  # fails looking for .next output, so skip it.
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
